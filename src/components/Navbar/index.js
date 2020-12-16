@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "./brand-icon.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -6,7 +7,13 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <Link className="nav-item" to="/home">
+          <img alt="logo" src={logo} width="60" height="60" />
+        </li>
+        <li>
+          <h1 className="nav-item">Team Up</h1>
+        </li>
+        <li>
+          <Link className="nav-item" to="/">
             Halaman Utama
           </Link>
         </li>
