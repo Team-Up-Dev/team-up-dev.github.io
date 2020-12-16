@@ -1,7 +1,8 @@
+import Routing from "./components/Routing";
 function App() {
   return (
     <div>
-      <h1>Team Up Dev</h1>
+      <Routing />
     </div>
   );
 }
