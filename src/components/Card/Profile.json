@@ -1,0 +1,50 @@
+{
+	"List": [{
+		"nama":"Aplikasi jomblo",
+		"url":"https://www.google.com",
+		"tags":["HTML","JS"],
+		"picture":"https://i.pinimg.com/originals/e8/c7/c4/e8c7c4d4e14a9e3b21faf3d7b37c5b03.jpg"
+	},
+	{
+		"nama":"Aplikasi masuk isekai",
+		"url":"https://www.21cineplex.com/",
+		"tags":["PHP","HTML"],
+		"picture":"https://image.freepik.com/free-photo/blue-mountains-famous-tourism-scenery-lijiang_1417-1143.jpg"
+	},
+	{
+		"nama":"Aplikasi Ular",
+		"url":"https://www.instagram.com/",
+		"tags":["Python"],
+		"picture":"https://thumbs.dreamstime.com/b/picturesque-autumn-scenery-santa-maddalena-village-church-road-colorful-trees-meadows-foreground-mountain-peaks-159426189.jpg"
+	},
+	{
+		"nama":"Aplikasi masuk isekai",
+		"url":"https://www.21cineplex.com/",
+		"tags":["PHP","HTML"],
+		"picture":"https://resources.matcha-jp.com/resize/720x2000/2020/04/23-101958.jpeg"
+	},
+	{
+		"nama":"Aplikasi jomblo",
+		"url":"https://www.google.com",
+		"tags":["HTML","JS"],
+		"picture":"https://i.pinimg.com/originals/e8/c7/c4/e8c7c4d4e14a9e3b21faf3d7b37c5b03.jpg"
+	},
+	{
+		"nama":"Aplikasi masuk isekai",
+		"url":"https://www.21cineplex.com/",
+		"tags":["PHP","HTML"],
+		"picture":"https://image.freepik.com/free-photo/blue-mountains-famous-tourism-scenery-lijiang_1417-1143.jpg"
+	},
+	{
+		"nama":"Aplikasi Ular",
+		"url":"https://www.instagram.com/",
+		"tags":["Python"],
+		"picture":"https://thumbs.dreamstime.com/b/picturesque-autumn-scenery-santa-maddalena-village-church-road-colorful-trees-meadows-foreground-mountain-peaks-159426189.jpg"
+	},
+	{
+		"nama":"Aplikasi masuk isekai",
+		"url":"https://www.21cineplex.com/",
+		"tags":["PHP","HTML"],
+		"picture":"https://resources.matcha-jp.com/resize/720x2000/2020/04/23-101958.jpeg"
+	}
+]}
