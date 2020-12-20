@@ -12,7 +12,6 @@ nav {
 
 nav ul {
   background: #37988e;
-  padding: 0 20px;
   list-style: none;
   position: relative;
   display: inline-table;
@@ -31,7 +30,7 @@ nav ul li:hover .nav-item {
   color: #000;
 }
 
-nav ul li .nav-item {
+ul li .nav-item {
   display: block;
   padding: 25px;
   color: #fff;
