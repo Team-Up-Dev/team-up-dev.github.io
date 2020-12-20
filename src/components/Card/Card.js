@@ -12,7 +12,7 @@ function CreateCards(card,index){
 					return (<li className={tag.toLowerCase()}>{tag}</li>)})
 					}
 				</ul>
-				<a href={card.url} id="get-detail">Get Detail >></a>
+				<a href={card.url} id="get-detail">Get Detail </a>
 			</div>
 		</div>
 	);

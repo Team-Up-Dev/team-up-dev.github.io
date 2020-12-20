@@ -1,11 +1,12 @@
-import Carousel from '../components/Carousel/index'
-import Card from '../components/Card/Card'
+import Carousel from "../components/Carousel/index";
+import Card from "../components/Card/Card";
+import Footer from "../components/Footer/Footer";
 const Home = () => {
-  return(
+  return (
     <>
       <Carousel />
-	  <Card />
-	  <div id="cards-list"></div>
+      <Card />
+      <Footer />
     </>
   );
 };
