@@ -6,22 +6,6 @@ const profileList = list.List;
 
 function CreateCards(card, index) {
   return (
-    <>
-      {/* <div className="cards">
-        <img src={card.picture} alt="scenery"></img>
-        <div className="cards-text">
-          <p>{card.nama}</p>
-          <ul>
-            {card.tags.map((tag, index) => {
-              return <li className={tag.toLowerCase()}>{tag}</li>;
-            })}
-          </ul>
-          <a href={card.url} id="get-detail">
-            Get Detail{" "}
-          </a>
-        </div>
-      </div> */}
-
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={card.picture} alt="scenery" />
         <Card.Body>
@@ -65,4 +49,5 @@ const CardList = () => {
     </>
   );
 };
+
 export default CardList;

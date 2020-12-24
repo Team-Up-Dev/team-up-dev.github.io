@@ -3,29 +3,33 @@ import logoTeamUp from "./brand-icon.png";
 
 const Footer = () => {
   return (
-    <>
-      <footer class="footer-distributed">
-        <div class="footer-left">
-          <h3>Teamup</h3>
-          <span>
-            <img alt="companyLogo" src={logoTeamUp} width="60" height="60" />
-          </span>
+    <footer className="footer-distributed">
+      <div className="footer-left">
+        <h3>Teamup</h3>
+        <span>
+          <img alt="companyLogo" src={logoTeamUp} width="60" height="60" />
+        </span>
 
-          <p class="footer-company-name">TeamUp © 2020</p>
+        <p className="footer-company-name">TeamUp &copy; 2020</p>
 
-          {/*ga ngerti cemana buat anchor tag untuk nge direct ke github/discord/tele  jadi ya di comment dulu lah*/}
-
-          {/* <div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
-				</div> */}
+        <div className="footer-icons">
+          <a href="https://discord.gg/y6rWpzCuwH">
+            <i className="fa fa-discord"></i>
+          </a>
+          {/* <a href="#">
+            <i className="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i className="fa fa-linkedin"></i>
+          </a> 
+            Yang ini dikomen dulu, kalo emang ga kepake apus aja
+          */}
+          <a href="https://github.com/Team-Up-Dev">
+            <i className="fa fa-github"></i>
+          </a>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 export default Footer;
