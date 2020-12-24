@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbars from "./Navbar";
 import Home from "../containers/Home";
 import Profile from "../containers/Profile";
 import Discussion from "../containers/Discussion";
@@ -10,7 +10,7 @@ import NotFound from "../containers/NotFound";
 const Routing = () => {
   return (
     <Router>
-      <Navbar />
+      <Navbars />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/profil" component={Profile} />
