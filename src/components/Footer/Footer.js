@@ -12,22 +12,22 @@ const Footer = () => {
 
         <p className="footer-company-name">TeamUp &copy; 2020</p>
 
-        <div className="footer-icons">
+        {/* <div className="footer-icons">
           <a href="https://discord.gg/y6rWpzCuwH">
             <i className="fa fa-discord"></i>
           </a>
-          {/* <a href="#">
+           <a href="#">
             <i className="fa fa-twitter"></i>
           </a>
           <a href="#">
             <i className="fa fa-linkedin"></i>
           </a> 
             Yang ini dikomen dulu, kalo emang ga kepake apus aja
-          */}
+          
           <a href="https://github.com/Team-Up-Dev">
             <i className="fa fa-github"></i>
           </a>
-        </div>
+        </div>  */}
       </div>
     </footer>
   );
