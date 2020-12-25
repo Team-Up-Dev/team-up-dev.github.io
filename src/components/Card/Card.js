@@ -6,6 +6,7 @@ const profileList = list.List;
 
 function CreateCards(card, index) {
   return (
+    <>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={card.picture} alt="scenery" />
         <Card.Body>
@@ -17,7 +18,7 @@ function CreateCards(card, index) {
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem>
-            <p>technologies</p>
+            <h5>technologies</h5>
             <ul>
               {card.tags.map((tag, index) => {
                 return <li className={tag.toLowerCase()}>{tag}</li>;
@@ -25,7 +26,7 @@ function CreateCards(card, index) {
             </ul>
           </ListGroupItem>
           <ListGroupItem>
-            <p>team</p>
+            <h5>team</h5>
           </ListGroupItem>
           <ListGroupItem>Vestibulum at eros</ListGroupItem>
         </ListGroup>
