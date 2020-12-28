@@ -1,64 +1,107 @@
+
 .cards-box {
 	//bagian ul
+
+	height: auto;
+	
 	ul {
 		list-style: none;
+	}
+	.cardTitle {
+		color: #212529;
+		font-size: 20px;
+	}
+	.btn {
+		color: #53575c;
+		transform: scale(0.9);
+	}
+	.alert {
+		font-size: 10px;
 	}
 	//bagian container kartu
 	.cards-box-container{
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-around;
 		background-color: rgba(200,200,200,0.8);
 		padding: 0 20px;
 		//ini class per kartunya
-		.cards {
+		.card {
 			width: 260px;
-			margin: 30px 20px 20px 0;
+			margin: 20px 0;
 			background-color: rgba(250,250,250,0.8);
 			border-radius: 10px;
 			//untuk gammbar didalam 1 kartu
-			img {
-				width: 260px;
-				height: 163px;
-			}
-			//ini semua teks di bawah gambar.
-			.cards-text{
-				padding: 20px;
-				//ini untuk tag
-				ul {
-					display: flex;
-					flex-direction: row;
-					// ini setiap tag nya
-					li {
-						padding: 0 10px;
-						margin: 7px 7px 7px 0;
-						
+
+	
+			.card-body {
+
+				.progress {
+					$themeColours: (
+    					"pink": #DC51AC,
+    					"red": #dc3545,
+						"purple":#6f42c1,
+						"orange":#fd7e14,
+						"orangeForHtml": #ed6a00,
+						"green": #198754,
+						"teal": #20c997,
+						"cyan": #0dcaf0,
+						"white": #fff,
+						"gray": #6c757d,
+						"gray-dark": #343a40,
+						"primary": #0d6efd,
+						"secondary": #6c757d,
+						"success":#198754,
+						"info": #0dcaf0,
+						"warning":#ffc107,
+						"danger":#dc3545,
+						"light": #f8f9fa,
+						"dark":#212529,
+						"blue": #0d6efd,
+						"indigo": #6610f2
+					);
+
+					@each $themeColour, $i in $themeColours {
+					    .progress-bar {
+					        &.bg-#{$themeColour} {
+					            background-color: $i;
+					        }	
+					    }
 					}
 				}
+
+				.card-link:hover {
+					text-decoration: underline;
+
+				}
+				img {
+					width: 260px;
+					height: 163px;
+				}
+				//ini semua teks di bawah gambar.
+				.cards-text{
+					padding: 20px;
+					//ini untuk tag
+					ul {
+						display: flex;
+						flex-direction: row;
+						// ini setiap tag nya
+						li {
+							padding: 0 10px;
+							margin: 7px 7px 7px 0;
+							
+						}
+					}
+				}
+							//ini untuk tulisan get detail
+				#get-detail {
+					float: right;
+					margin-bottom: 10px;
+				}
 			}
-			//ini untuk tulisan get detail
-			#get-detail {
-				float: right;
-				margin-bottom: 10px;
-			}
+
 		}
 	}
 	//Ini classes untuk tag. Jadi setiap tag ada class dan diberi warna
-	.html {
-		background-color: orange;
-	}
-	.css {
-		background-color: blue;
-	}
-	.php {
-		background-color: red;
-	}
-	.js {
-		background-color: yellow;
-	}
-	.python {
-		background-color: blue;
-		color: white;
-	}
-	
+
 }

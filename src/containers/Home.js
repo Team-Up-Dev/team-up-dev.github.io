@@ -5,8 +5,9 @@ const Home = () => {
   return (
     <>
       <Carousel />
-      <CardList />
-      <Footer />
+      {console.log(< CardList />)}
+      < CardList />
+      < Footer />
     </>
   );
 };
