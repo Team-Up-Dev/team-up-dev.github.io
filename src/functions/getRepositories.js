@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/core";
 
 
-const octokit = new Octokit({ auth: `b8302e5df67ae4ef9417247c88f5bae6a22a6589` });
+const octokit = new Octokit();
 
 function getRepositories(type = "public", repositoriesAmount = 8, sort = "desc", page = 1) {
     return octokit.request("GET /orgs/{org}/repos", {
@@ -56,7 +56,7 @@ export default class {
             langs.push({ lang: "other", value: 100 - a })
         }
 
-        console.log(langs)
+        // console.log(langs)
 
         return langs
         // return objects of array

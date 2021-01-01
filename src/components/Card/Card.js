@@ -9,7 +9,6 @@ import Alert from 'react-bootstrap/Alert';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Popover from 'react-bootstrap/Popover';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Overlay from 'react-bootstrap/Overlay';
 
 import { getLatestRepo } from "../../functions/getRepositories";
 import Repo from "../../functions/getRepositories";
@@ -83,11 +82,18 @@ class CreateCards extends Component {
       <Card style={{ width: '18rem' }}>
         <Card.Body>
 
-          {card["archived"] === true ? <Alert variant="warning" >
-            This repository has been archived archived
-      </Alert> : ''}
-          <Card.Link href={card["html_url"]} target="_blank" className="cardTitle">{BookRepoSVG()} {card.name}</Card.Link>
-          <Card.Subtitle className="mb-2 mt-1 text-muted">{card["language"]}</Card.Subtitle>
+          {card["archived"] === true ?
+            <Alert variant="warning" >
+              This repository has been archived archived
+            </Alert>
+            : ''
+          }
+          <Card.Link href={card["html_url"]} target="_blank" className="cardTitle">
+            {BookRepoSVG()} {card.name}
+          </Card.Link>
+          <Card.Subtitle className="mb-2 mt-1 text-muted">
+            {card["language"]}
+          </Card.Subtitle>
           <Card.Text>
             {card["description"]}
           </Card.Text>
@@ -107,23 +113,24 @@ class CreateCards extends Component {
           }
 
 
-          <Button variant="light" href={`${card["html_url"]}/stargazers`} target="_blank" className="btn" style={{ marginRight: "2px" }}><i className="fas fa-star"></i> {card["stargazers_count"]}</Button>
+          <Button variant="light"
+            href={`${card["html_url"]}/stargazers`}
+            target="_blank"
+            className="btn"
+            style={{ marginRight: "2px" }}>
+            <i className="fas fa-star"></i> {card["stargazers_count"]}
+          </Button>
 
           <Button variant="light" className="btn"
             href={`${card["html_url"]}/fork`} target="_blank"
-            style={{ marginLeft: "2px", marginRight: "2px" }
-            }><i className="fas fa-code-branch"></i> {card["forks"]}
+            style={{ marginLeft: "2px", marginRight: "2px" }}>
+            <i className="fas fa-code-branch"></i> {card["forks"]}
           </Button>
 
         </Card.Body>
       </Card>
-
     )
-
   }
-
-
-
 }
 
 class CardList extends Component {
@@ -137,6 +144,7 @@ class CardList extends Component {
     try {
       // get latestRepo
       let latestRepo = await getRepo();
+      console.log("latestRepo", latestRepo)
 
       if ("status" in latestRepo && latestRepo["status"] !== 200) {
         throw new Error("FAILED TO FETCH!");
