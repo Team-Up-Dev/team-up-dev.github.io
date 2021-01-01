@@ -103,9 +103,8 @@ class CreateCards extends Component {
             langs === null && fetchLang === null
               ? <Spinner animation="border" />
               : langs === null && fetchLang === true ? ""
-                :
-                <OverlayTrigger trigger={["hover", "focus"]} placement="auto" overlay={this.renderTooltip}>
-
+                : <OverlayTrigger trigger={["hover", "focus"]}
+                  placement="auto" overlay={this.renderTooltip}>
                   <ProgressBar className="mb-2" >
                     {langs.map(this.createProgressBar)}
                   </ProgressBar>
@@ -167,7 +166,7 @@ class CardList extends Component {
       content = <Spinner animation="border" />;
       // console.log("IF")
     } else if (error) {
-      content = "Error has occured!";
+      content = "Error has occured! Check console to see the details";
     } else {
       // console.log("ELSE")
       content = repositories["data"];
