@@ -7,40 +7,20 @@ import Training from "../containers/Training";
 import NotFound from "../containers/NotFound";
 
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
       <Navbars />
       <Switch>
-        <Route path="/Profile">
-          <Profile />
-        </Route>
-        <Route path="/Discussion">
-          <Discussion />
-        </Route>
-        <Route path="/project">
-          <Project />
-        </Route>
+        <Route path="/Profile" component={Profile} />
+        <Route path="/Discussion" component={Discussion} />
+        <Route path="/project" component={Project} />
         <Route path="/training" component={Training} />
-
-        <Route exact path="/">
-          <Home />
-        </Route>
-
-        <Route >
-          <NotFound />
-        </Route>
-
+        <Route exact path="/" component={Home} />
+        <Route component={NotFound} />
       </Switch>
-    </Router >
+    </Router>
   );
 }
