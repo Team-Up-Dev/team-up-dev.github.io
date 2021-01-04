@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export default function (lang) {
   let language = lang.toLowerCase();
 

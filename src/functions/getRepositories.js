@@ -22,6 +22,7 @@ function latestRepositories(repositoriesAmount, page = 1) {
   return repositories;
 }
 
+// eslint-disable-next-line
 export default class {
   constructor(repo) {
     this["langs_url"] = repo["languages_url"];
