@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <Carousel />
-      {console.log(<CardList />)}
+      <CardList />
       <CardList />
       <Footer />
     </>
