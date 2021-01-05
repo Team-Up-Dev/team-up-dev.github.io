@@ -1,4 +1,4 @@
-import Link from "react-router-dom/Link";
+import { Link } from "react-router-dom";
 import Brand from "react-bootstrap/NavbarBrand";
 import logo from "../brand-icon.png";
 
