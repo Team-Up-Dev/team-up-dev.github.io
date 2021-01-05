@@ -3,7 +3,7 @@ import loadable from "@loadable/component";
 
 const Brand = loadable(() => import("./lazy/Brand"), {
   fallback: (
-    <a className="navbar-brand" href="/" style={{ paddingLeft: "30px" }}>
+    <a className="navbar-brand" href="/" style={{ paddingLeft: "34px" }}>
       Team Up
     </a>
   )
