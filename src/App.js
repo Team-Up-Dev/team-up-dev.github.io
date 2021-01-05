@@ -1,11 +1,10 @@
-import Routing from "./components/Routing";
+import loadable from "@loadable/component";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+const Routing = loadable(() => import("./components/Routing"));
+
 function App() {
-  return (
-    <div>
-      <Routing />
-    </div>
-  );
+  return <Routing />;
 }
 
 export default App;

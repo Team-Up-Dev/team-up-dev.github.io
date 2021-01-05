@@ -1,11 +1,13 @@
+import loadable from "@loadable/component";
 import Carousel from "../components/Carousel/index";
-import CardList from "../components/Card/Card";
-import Footer from "../components/Footer/Footer";
+
+const CardList = loadable(() => import("../components/Card/Card"));
+const Footer = loadable(() => import("../components/Footer/Footer"));
+
 const Home = () => {
   return (
     <>
       <Carousel />
-      <CardList />
       <CardList />
       <Footer />
     </>
