@@ -1,43 +1,24 @@
-import { Link } from "react-router-dom";
-import Navbar from "react-bootstrap/Navbar";
-import { Nav } from "react-bootstrap";
-import logo from "./brand-icon.png";
-const Navbars = () => {
+import BSNavbar from "react-bootstrap/Navbar";
+import loadable from "@loadable/component";
+
+const Brand = loadable(() => import("./lazy/Brand"), {
+  fallback: (
+    <a className="navbar-brand" href="/" style={{ paddingLeft: "34px" }}>
+      Team Up
+    </a>
+  )
+});
+const Nav = loadable(() => import("./lazy/Navigation"));
+
+const Navbar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Link>
-        <Navbar.Brand as={Link} to="/">
-          <img
-            alt=""
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-          Team up
-        </Navbar.Brand>
-      </Link>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/">
-            HomePage
-          </Nav.Link>
-          <Nav.Link as={Link} to="/profil">
-            Profile
-          </Nav.Link>
-          <Nav.Link as={Link} to="/discussion">
-            Discussion
-          </Nav.Link>
-          <Nav.Link as={Link} to="/project">
-            Project
-          </Nav.Link>
-          <Nav.Link as={Link} to="/training">
-            Training
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <BSNavbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Brand />
+      <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
+      <BSNavbar.Collapse id="responsive-navbar-nav">
+        <Nav />
+      </BSNavbar.Collapse>
+    </BSNavbar>
   );
 };
-export default Navbars;
+export default Navbar;

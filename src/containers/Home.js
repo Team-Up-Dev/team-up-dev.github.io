@@ -1,13 +1,15 @@
+import loadable from "@loadable/component";
 import Carousel from "../components/Carousel/index";
-import CardList from "../components/Card/Card";
-import Footer from "../components/Footer/Footer";
+
+const CardList = loadable(() => import("../components/Card"));
+const Footer = loadable(() => import("../components/Footer"));
+
 const Home = () => {
   return (
     <>
       <Carousel />
-      {console.log(< CardList />)}
-      < CardList />
-      < Footer />
+      <CardList />
+      <Footer />
     </>
   );
 };

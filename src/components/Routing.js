@@ -1,46 +1,34 @@
-import Navbars from "./Navbar";
-import Home from "../containers/Home";
-import Profile from "../containers/Profile";
-import Discussion from "../containers/Discussion";
-import Project from "../containers/Project";
-import Training from "../containers/Training";
-import NotFound from "../containers/NotFound";
+import loadable from "@loadable/component";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
+const Navbar = loadable(() => import("./Navbar"), {
+  fallback: (
+    <nav
+      className="navbar navbar-expand-lg navbar-dark bg-dark"
+      style={{ height: "56px" }}
+    />
+  )
+});
+
+const Home = loadable(() => import("../containers/Home"));
+const Profile = loadable(() => import("../containers/Profile"));
+const Discussion = loadable(() => import("../containers/Discussion"));
+const Project = loadable(() => import("../containers/Project"));
+const Training = loadable(() => import("../containers/Training"));
+const NotFound = loadable(() => import("../containers/NotFound"));
 
 export default function App() {
   return (
     <Router>
-      <Navbars />
+      <Navbar />
       <Switch>
-        <Route path="/Profile">
-          <Profile />
-        </Route>
-        <Route path="/Discussion">
-          <Discussion />
-        </Route>
-        <Route path="/project">
-          <Project />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route path="/Discussion" component={Discussion} />
         <Route path="/training" component={Training} />
-
-        <Route exact path="/">
-          <Home />
-        </Route>
-
-        <Route >
-          <NotFound />
-        </Route>
-
+        <Route path="/project" component={Project} />
+        <Route path="/Profile" component={Profile} />
+        <Route component={NotFound} />
       </Switch>
-    </Router >
+    </Router>
   );
 }
