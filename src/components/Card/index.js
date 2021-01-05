@@ -103,6 +103,7 @@ class CreateCards extends Component {
             href={card["html_url"]}
             target="_blank"
             className="cardTitle"
+            rel="noopener noreferrer"
           >
             {BookRepoSVG()} {card.name}
           </Card.Link>
@@ -133,6 +134,7 @@ class CreateCards extends Component {
             target="_blank"
             className="btn"
             style={{ marginRight: "2px" }}
+            rel="noopener noreferrer"
           >
             <i className="fas fa-star"></i> {card["stargazers_count"]}
           </Button>
@@ -143,6 +145,7 @@ class CreateCards extends Component {
             href={`${card["html_url"]}/fork`}
             target="_blank"
             style={{ marginLeft: "2px", marginRight: "2px" }}
+            rel="noopener noreferrer"
           >
             <i className="fas fa-code-branch"></i> {card["forks"]}
           </Button>
