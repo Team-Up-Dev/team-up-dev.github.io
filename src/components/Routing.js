@@ -1,7 +1,7 @@
 import loadable from "@loadable/component";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const Navbars = loadable(() => import("./Navbar"), {
+const Navbar = loadable(() => import("./Navbar"), {
   fallback: (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-dark"
@@ -20,7 +20,7 @@ const NotFound = loadable(() => import("../containers/NotFound"));
 export default function App() {
   return (
     <Router>
-      <Navbars />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/Discussion" component={Discussion} />
