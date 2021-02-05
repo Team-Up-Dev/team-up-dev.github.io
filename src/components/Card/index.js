@@ -196,6 +196,7 @@ class CardList extends Component {
 
     return (
       <div className="cards-box">
+        <h1 style={{ textAlign: "center", margin: "5px" }}>Project</h1>
         <div className="cards-box-container" id="cards-list">
           {!error && fetching
             ? content.map((card, index) => {

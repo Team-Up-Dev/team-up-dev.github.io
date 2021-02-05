@@ -1,7 +1,9 @@
+import ContributorCard from "../components/Contributor/ContributorCard";
 const Discussion = () => {
   return (
     <div className="container">
       <h1 className="text-uppercase"> Discussion</h1>
+      <ContributorCard />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
