@@ -1,3 +1,4 @@
+import Container from "react-bootstrap/Container";
 import BSNavbar from "react-bootstrap/Navbar";
 import loadable from "@loadable/component";
 
@@ -13,12 +14,15 @@ const Nav = loadable(() => import("./lazy/Navigation"));
 const Navbar = () => {
   return (
     <BSNavbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Brand />
-      <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
-      <BSNavbar.Collapse id="responsive-navbar-nav">
-        <Nav />
-      </BSNavbar.Collapse>
+      <Container>
+        <Brand />
+        <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
+        <BSNavbar.Collapse id="responsive-navbar-nav">
+          <Nav />
+        </BSNavbar.Collapse>
+      </Container>
     </BSNavbar>
   );
 };
+
 export default Navbar;
