@@ -24,6 +24,7 @@
     "npm-check": "npm-check",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "deploy:maintainer": "node deploy-maintainer.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
